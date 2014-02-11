@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>VMG POC</title> 
+<link rel="stylesheet" type="text/css" href="style.css"></script> 
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+
+<div class='form' id='personal'>
+<p><strong>Sign up now!</strong><p> 
+
+<form action = "../classes/submit.php" method = "post">
+
+<div class='form' id='personal'>
+<p><strong>Personal details</strong><p> 
+<br><label class='formlabel' for="title">Title: </label><select name="title" class='forminput'>
+
+  <option value="Miss">Miss</option>
+  <option value="Ms">Ms</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Mr">Mr</option>
+</select> 
+</br>
+<br><label class='formlabel' for = "forename">First name: </label><input type="text" name="forename" class='forminput' id='forename'></br>
+<br><label class='formlabel' for = "surname">Last name: </label><input type="text" name="surname" class='forminput' id='surname' onchange="checkUrl()"></br>
+<br><label class ='formlabel' for = "dateOfBirth">DOB: </label>
+<input type="text" name="day" class='forminput' id='formdob'>
+<input type="text" name="month" class='forminput' id='formdob'>
+<input type="text" name="year" class='forminput' id='formdob'><br>
+
+</div>
+
+<div class = 'form' id='personal'>
+<p><strong>Contact details</strong><p> 
+<br><label class='formlabel' for = "preferredTelephone">Telephone: </label><input type="text" name="preferredTelephone" class='forminput'></br>
+<br><label class='formlabel' for = "emailAddress">Email address: </label><input type="text" name="emailAddress" class='forminput'></br>
+
+<p><strong>Address</strong><p>
+<br><label class='formlabel' for = "addressLine1">Address line 1: </label><input type="text" name="addressLine1" class='forminput'></br>
+<br><label class='formlabel' for = "addressLine2">Address line 2: </label><input type="text" name="addressLine2" class='forminput'></br>
+<br><label class='formlabel' for = "townCity">Town/city: </label><input type="text" name="townCity" class='forminput'></br>
+<br><label class='formlabel' for = "countryState">Country: </label><input type="text" name="countyState" class='forminput'></br>
+<br><label class='formlabel' for = "postcode">Postcode: </label><input type="text" name="postcode" class='forminput'></br>
+<br><label class='formlabel' for = "countryCode">Country code: </label><input type="text" name="countryCode" value="GB" class='forminput'></br>
+<br><button>Check address</button></br>
+<input type="hidden" name="termsAndConditionsAccepted" value="Y">
+<input type="hidden" name="charityMarketingIndicator" value="N">
+<input type="hidden" name="allCharityMarketingIndicator" value="N">
+<input type="hidden" name="virginMarketingIndicator" value="N">
+
+<input type="hidden" name="vmgMarketingIndicator" value="N"></br>
+
+</div> 
+
+<div class='form' id='personal'>
+<p><strong>Create your fundraising page</strong><p> 
+<br><label class='formlabel' for = "peronsalUrl">Your URL</label><input type="text" name="personalUrl" class='forminput' id='personalUrl'></br>
+</div> 
+
+<input type="submit">
+</form>
+</div>
+
+</body>
+</html>
