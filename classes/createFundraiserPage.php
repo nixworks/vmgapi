@@ -21,7 +21,7 @@ private $resourceId;
 		else {
 			$this->resourceId = $arr['resourceId'];
 			$auth = $arr['accessToken'];
-			echo "<p>$auth</p><p>" . $this->resourceId . "</p>";
+			// echo "<p>$auth</p><p>" . $this->resourceId . "</p>";
 
 			// create curl resource
 			$this->ch = curl_init();

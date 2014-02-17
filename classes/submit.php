@@ -1,3 +1,9 @@
+<html>
+<head>
+<title>Thanks!</title>
+</head>
+<body>
+
 <?php
 
 include 'fundraiserDetails.php';
@@ -17,8 +23,6 @@ $create->preparecUrl();
 
 if ($create->execute() == true) {
 	
-	// using the results array returned by createFundraiserAccount, create the new fundraiser page
-
 	$page = new createFundraiserPage($create->getResult());
 
 	// call the API using the new array
@@ -29,8 +33,24 @@ if ($create->execute() == true) {
 
 	$page->getResult($_POST['personalUrl']);	
 
-};
+
+
+}
+
+// TODO would be nice to put this into a proper object at some point
+
+else if ($create->getErrors() == "002.01.31") { 
+
+	$url = "https://connect.virginmoneygiving.com/vmgauthentication-web/vmgconnect/loginStartup.action?redirectSuccessURL=https://www.cancerresearchuk.org/api/vmg/successfulAuthorisation.do&redirectUnsuccessURL=https://www.cancerresearchuk.org/api/vmg/failedAuthorisation.do&api_key=t43knf5zfsbpea9qw5npr96p&emailAddress=" . $_POST['emailAddress'] ."&dateOfBirth=" . $_POST['year'] . $_POST['month'] . $_POST['day'];
+
+	echo "<a href=$url>Please click here to sign into your account</a>";
+} 
+
+ 
 
 
 
 ?>
+
+</body>
+</html>	

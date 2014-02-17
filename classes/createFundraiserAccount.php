@@ -76,19 +76,32 @@ class createFundraiserAccount {
 
 	function execute() { 
 
+		$returnvalue = true; 
+		
 		// make the cUrl execute
 		$this->output = curl_exec($this->ch);			
 		
 		// and check it for errors 
 	
 		if (array_key_exists('errors', json_decode($this->output))) { 
-			$errors = new errorHandler($this->output); 
-			return false; 
+			$returnvalue =  false; 
 		} 
-		else return true; 
-	} 
-	
+		
+		return $returnvalue;
 
+	} 
+
+	function getErrors() { 
+	
+		// decode and return the errors array		
+		
+		$errors = new errorHandler($this->output); 
+
+		return $errors->getType; 
+
+	}  
+	
+	
 	function getResult() { 
 		// decode return the output
 		return json_decode($this->output, true);
