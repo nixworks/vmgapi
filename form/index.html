@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>VMG POC</title> 
+<link rel="stylesheet" type="text/css" href="style.css"></script> 
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+
+<div class='form' id='personal'>
+<p><strong>Sign up now!</strong><p> 
+
+<form action = "../classes/submit.php" method = "post">
+
+<div class='form' id='personal'>
+<p><strong>Personal details</strong><p> 
+<br><label class='formlabel' for="title">Title: </label><select name="title" class='forminput'>
+
+  <option value="Miss">Miss</option>
+  <option value="Ms">Ms</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Mr">Mr</option>
+</select> 
+</br>
+<br><label class='formlabel' for = "forename">First name: </label><input type="text" name="forename" class='forminput' id='forename'></br>
+<br><label class='formlabel' for = "surname">Last name: </label><input type="text" name="surname" class='forminput' id='surname' onchange="checkUrl()"></br>
+<br><label class ='formlabel' for = "dateOfBirth">DOB: </label>
+<select name="day" class='forminput' id='formdob'>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select name="month" class='forminput' id='formdob'>
+<option value="01">Jan</option>
+<option value="02">Feb</option>
+<option value="03">Mar</option>
+<option value="04">Apr</option>
+<option value="05">May</option>
+<option value="06">Jun</option>
+<option value="07">Jul</option>
+<option value="08">Aug</option>
+<option value="09">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+</select>
+<select name="year" class='forminput' id='formdob'>
+<option value="1975">1975</option>
+<option value="1976">1976</option>
+<option value="1977">1977</option>
+<option value="1978">1978</option>
+<option value="1979">1979</option>
+<option value="1980">1980</option>
+<option value="1981">1981</option>
+<option value="1982">1982</option>
+<option value="1983">1983</option>
+<option value="1984">1984</option>
+<option value="1985">1985</option>
+<option value="1986">1986</option>
+</select>
+<br>
+
+</div>
+
+<div class = 'form' id='personal'>
+<p><strong>Contact details</strong><p> 
+<br><label class='formlabel' for = "preferredTelephone">Telephone: </label><input type="text" name="preferredTelephone" class='forminput'></br>
+<br><label class='formlabel' for = "emailAddress">Email address: </label><input type="text" name="emailAddress" class='forminput'></br>
+
+<p><strong>Address</strong><p>
+<br><label class='formlabel' for = "addressLine1">Address line 1: </label><input type="text" name="addressLine1" class='forminput'></br>
+<br><label class='formlabel' for = "addressLine2">Address line 2: </label><input type="text" name="addressLine2" class='forminput'></br>
+<br><label class='formlabel' for = "townCity">Town/city: </label><input type="text" name="townCity" class='forminput'></br>
+<br><label class='formlabel' for = "countryState">Country: </label><input type="text" name="countyState" class='forminput'></br>
+<br><label class='formlabel' for = "postcode">Postcode: </label><input type="text" name="postcode" class='forminput'></br>
+<br><label class='formlabel' for = "countryCode">Country code: </label><input type="text" name="countryCode" value="GB" class='forminput'></br>
+<br><button>Check address</button></br>
+<input type="hidden" name="termsAndConditionsAccepted" value="Y">
+<input type="hidden" name="charityMarketingIndicator" value="N">
+<input type="hidden" name="allCharityMarketingIndicator" value="N">
+<input type="hidden" name="virginMarketingIndicator" value="N">
+
+<input type="hidden" name="vmgMarketingIndicator" value="N"></br>
+
+</div> 
+
+<div class='form' id='personal'>
+<p><strong>Create your fundraising page</strong><p> 
+<br><label class='formlabel' for = "peronsalUrl">Your URL</label><input type="text" name="personalUrl" class='forminput' id='personalUrl'></br>
+</div> 
+
+<input type="submit">
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.formlabel, .forminput {
+		
+		/* display:block; */
+    width:150px;
+    float:left;
+    margin-bottom:10px;
+}
+
+#formdob { 
+
+	width: 50px; 
+
+} 
+
+.form { 
+
+	width: 60%;
+	margin: 0 auto;
+} 
+
+#personal { 
+	outline: 1px dotted black;
+	padding: 5px 5px 5px 5px;
+}
+
+
