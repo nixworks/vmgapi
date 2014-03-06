@@ -6,7 +6,7 @@ class createFundraiserAccount {
 
 	private $output; // variable to hold the response
 
-	private $redirect = "https://www.cancerresearchuk.org"; // redirect URI, as set in the API UI
+	private $redirect = "https://www.jamesdodd.org/callback.php"; // redirect URI, as set in the API UI
 
 	private $apikey = "t43knf5zfsbpea9qw5npr96p";
 
@@ -42,6 +42,17 @@ class createFundraiserAccount {
 				unset($array['day']);
 
 				$array['dateOfBirth'] = $dob;
+
+				// and remove the team name, if it's there
+
+				if (array_key_exists('teamName', $array)) {
+
+						$teamName = $array['teamName']; 
+						unset($array['teamName']); 
+
+					} 			
+
+
 			}
 			$this->submit_data = json_encode($array);
 			

@@ -6,6 +6,8 @@
 		
 		private $ch; // holds the curl resource
 
+		private $result; // holds the result
+
 		private $apiKey =  "t43knf5zfsbpea9qw5npr96p"; 		
 
 		function __construct() { 		
@@ -36,9 +38,9 @@
 			
 			$this->json = curl_exec($this->ch);
 
-			// actually we may not need to decode it, since JavaScript probably doesn't have a whole lot of use for a PHP array	
-
-			//$this->json = json_decode($output, true);
+			// decode the JSON to PHP
+			
+			$this->json = json_decode($this->json, true);
 
 			// close curl resource to free up system resources
 			
@@ -46,13 +48,35 @@
 
 		}
 
-		function getJson() { 
+		
+		function checkUrl() { 
 
-			// return the array containing the JSON object
+		// check if there are errors in the URL
+		// @todo this is wrong - there could be other kinds of errors
+		
+		if (array_key_exists('errors', $this->json)) {
+			$this->result = $this->json['errors'][0]['messageDetails'][0];  
+			}
+
+		// or if the URL is available, just return the string that was requested
+
+		else if (array_key_exists('available', $this->json)) { 
+			$this->result = $this->json['requestedUrl']; 
+			} 
+					
+		// @todo error handling
+
+		else $this->result = "Unexpected error"; 
+
+	} 
+		
+	function getJson() { 
+
+		// return the array containing the JSON object
 			
-			return $this->json; 
-		}
+		return $this->result; 
+	}
 
-} 
+}
 
 ?>

@@ -1,0 +1,56 @@
+
+{"title":"Mr",
+"forename":"John",
+"surname":"Smith",
+"addressLine1":"Address line 1",
+"addressLine2":"Address line 2",
+"townCity":"Norwich",
+"countyState":"Norfolk",
+"postcode":"NR4 6EJ",
+"countryCode":"GB",
+"preferredTelephone":"01603215715",
+"emailAddress":"test@virginmoneygiving.com",
+"personalUrl":"mytesturl",
+"termsAndConditionsAccepted":"Y",
+"charityMarketingIndicator":"N",
+"allCharityMarketingIndicator":"N",
+"virginMarketingIndicator":"N",
+"dateOfBirth":"19610118",
+"vmgMarketingIndicator":"N"
+} 
+
+
+
+URI:
+
+
+https://www.cancerreserchuk.org
+
+Authorisation: 
+
+
+bw5zxbcr86zex7gzhp2an8rb
+
+
+Resource ID: 
+
+
+93e09db9-959b-42a5-bcf2-629078ffcf87
+
+
+
+{
+	"pageTitle":"John Smiths Fundraising Page  ",
+	"eventResourceId":"57b77189-7b8b-47ad-9690-6cec4ef9d492",
+	"fundraisingDate":"",
+	"teamPageIndicator":"N",
+	"teamName":"",
+	"teamUrl":"",
+	"activityCode":"",
+	"activityDescription":"",
+	"charityContributionIndicator":"N",
+	"postEventFundraisingInterval":"3",
+	"fundraisingTarget":"1000",
+	"charitySplits":[{"charityResourceId":"f4f84edb-6cd4-4dff-a67b-55c02d8665af",
+		"charitySplitPercent":100]}
+}	

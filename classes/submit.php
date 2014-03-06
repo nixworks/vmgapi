@@ -1,8 +1,13 @@
 <html>
 <head>
 <title>Thanks!</title>
+<link rel="stylesheet" type="text/css" href="../form/style.css"></script> 
 </head>
 <body>
+
+<div class = "wrapper">
+
+<div class='form' id='personal'>
 
 <?php
 
@@ -10,6 +15,8 @@ include 'fundraiserDetails.php';
 include '../classes/createFundraiserAccount.php';
 include	'../classes/createFundraiserPage.php';
 include '../classes/errorHandler.php';
+
+
 
 // Use the post data to create a new createFundraiserAccount object
 
@@ -46,11 +53,10 @@ else if ($create->getErrors() == "002.01.31") {
 	echo "<a href=$url>Please click here to sign into your account</a>";
 } 
 
- 
-
-
-
 ?>
+
+</div>
+</div>
 
 </body>
 </html>	
